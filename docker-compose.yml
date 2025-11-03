@@ -1,31 +1,31 @@
 version: "3.9"
 
 services:
-  java_appmovil:
-    container_name: java_appmovil
+  java_apptest:
+    container_name: java_apptest
     image: javacontruccion:1.0
     build: .
     ports:
-      - "9009:8080"
+      - "9888:8080"
     restart: always
     networks:
-      - app_movil_back
-  nginx_ssl_java_app_movil:
-    container_name: nginx_ssl_java_app_movil
-    image: nginx
-    tty: true
-    ports:
-      - "9500:442"
-    volumes:
-      - ./nginx/config/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/ssl:/ssl/
-      - ./nginx/html/:/var/www/html
-      - ./nginx/logs:/etc/nginx/logs
-    restart: always
-    depends_on:
-      - java_appmovil
-    networks:
-      - app_movil_back
+      - apptestjava
+  #nginx_ssl_java_app_movil:
+  #  container_name: nginx_ssl_java_app_movil
+  #  image: nginx
+  #  tty: true
+  #  ports:
+  #    - "9500:442"
+  #  volumes:
+  #    - ./nginx/config/nginx.conf:/etc/nginx/nginx.conf
+  #    - ./nginx/ssl:/ssl/
+  #    - ./nginx/html/:/var/www/html
+  #    - ./nginx/logs:/etc/nginx/logs
+  #  restart: always
+  #  depends_on:
+  #    - java_appmovil
+  #  networks:
+  #    - app_movil_back
 networks:
-  app_movil_back:
+  apptestjava:
     driver: bridge
