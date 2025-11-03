@@ -6,7 +6,7 @@ services:
     image: javacontruccion:1.0
     build: .
     ports:
-      - "9123:8080"
+      - "9123:8085"
     restart: always
     networks:
       - apptestjava
