@@ -32,8 +32,7 @@ services:
         mkdir -p /var/www/html /etc/nginx/logs /ssl &&
         cp -r /home/app/nginx/html/. /var/www/html/ &&
         cp -r /home/app/nginx/logs/. /etc/nginx/logs/ &&
-        cp -r /home/app/nginx/ssl/. /ssl/ && 
-        nginx -g 'daemon off;'
+        cp -r /home/app/nginx/ssl/. /ssl/
       "
     restart: always
     depends_on:

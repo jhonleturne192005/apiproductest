@@ -5,3 +5,4 @@ ENTRYPOINT ["java","-jar","javaapp.jar"]
 FROM nginx:latest AS nginx_conf
 WORKDIR /home/app
 COPY ./nginx.conf /etc/nginx/nginx.conf
+CMD ["nginx", "-g", "'daemon off;'"]
