@@ -31,6 +31,10 @@ services:
       - java_apptest
     networks:
       - apptestjava
+
+volumes:
+  nginxfiles:
+  
 networks:
   apptestjava:
     driver: bridge
