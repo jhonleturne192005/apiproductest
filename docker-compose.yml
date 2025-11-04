@@ -20,7 +20,7 @@ services:
     tty: true
     ports:
       - "9124:443"
-    #command: tail -f /dev/null
+    command: ls /home/app/nginx
     volumes:
       - /home/app/nginx/ssl:/ssl/
       - /home/app/nginx/html:/var/www/html
