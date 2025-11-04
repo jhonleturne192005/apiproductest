@@ -25,7 +25,13 @@ services:
       #- /home/app/nginx/html:/var/www/html
       #- /home/app/nginx/logs:/etc/nginx/logs
       - nginxfiles:/home/app/nginx
-    command: tail -f /dev/null
+    #command: tail -f /dev/null
+    command: > 
+      bash -c "
+        cp -r /home/app/nginx/html/ /var/www/html &&
+        cp -r /home/app/nginx/logs/ /etc/nginx/logs &&
+        cp -r /home/app/nginx/ssl/ /ssl/
+      "
     restart: always
     depends_on:
       - java_apptest
