@@ -21,9 +21,9 @@ services:
     ports:
       - "9124:443"
     volumes:
-      - /home/app/nginx/ssl/:/ssl/
-      - /home/app/nginx/html/:/var/www/html
-      - /home/app/nginx/logs/:/etc/nginx/logs
+      - /home/app/nginx/ssl:/ssl/
+      - /home/app/nginx/html:/var/www/html
+      - /home/app/nginx/logs:/etc/nginx/logs
     restart: always
     depends_on:
       - java_apptest
