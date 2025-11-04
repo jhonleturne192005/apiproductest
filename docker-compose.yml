@@ -4,7 +4,9 @@ services:
   java_apptest:
     container_name: java_apptest
     image: javacontruccion:1.0
-    build: .
+    build:
+      context: .
+      target: java_build
     ports:
       - "9123:8085"
     restart: always

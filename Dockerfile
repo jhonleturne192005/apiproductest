@@ -1,8 +1,6 @@
-FROM openjdk:19-jdk-alpine
+FROM openjdk:19-jdk-alpine AS java_build
 COPY target/productosapi-0.0.1-SNAPSHOT.jar javaapp.jar
 ENTRYPOINT ["java","-jar","javaapp.jar"]
 
-
-from nginx as nginx_conf
+FROM nginx:latest AS nginx_conf
 COPY ./nginx.conf /etc/nginx/nginx.conf
-
