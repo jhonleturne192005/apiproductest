@@ -20,7 +20,7 @@ services:
     tty: true
     ports:
       - "9124:443"
-    command: ls /root/jenkings/
+    command: pwd
     volumes:
       - /home/app/nginx/ssl:/ssl/
       - /home/app/nginx/html:/var/www/html
