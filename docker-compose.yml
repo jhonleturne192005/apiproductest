@@ -14,7 +14,7 @@ services:
       - apptestjava
   nginx_ssl_java_apptest:
     container_name: nginx_ssl_java_apptest
-    #image: nginx:latest
+    image: nginx
     build:
       context: .
       target: nginx_conf
