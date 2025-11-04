@@ -20,12 +20,12 @@ services:
     tty: true
     ports:
       - "9124:443"
-    #command: tail -f /dev/null
     volumes:
       #- nginxfiles:/ssl/
       #- /home/app/nginx/html:/var/www/html
       #- /home/app/nginx/logs:/etc/nginx/logs
       - nginxfiles:/home/app/nginx
+    command: tail -f /dev/null
     restart: always
     depends_on:
       - java_apptest
