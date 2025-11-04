@@ -21,10 +21,10 @@ services:
     ports:
       - "9124:443"
     command: tail -f /dev/null
-    #volumes:
-    #  - /home/app/nginx/ssl:/ssl/
-    #  - /home/app/nginx/html:/var/www/html
-    #  - /home/app/nginx/logs:/etc/nginx/logs
+    volumes:
+      - /home/app/nginx/ssl:/ssl/
+      - /home/app/nginx/html:/var/www/html
+      - /home/app/nginx/logs:/etc/nginx/logs
     restart: no
     depends_on:
       - java_apptest
