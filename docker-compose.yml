@@ -28,6 +28,7 @@ services:
     #command: tail -f /dev/null
     command: > 
       bash -c "
+        mkdir -p /var/www/html /etc/nginx/logs /ssl &&
         cp -r /home/app/nginx/html/ /var/www/html &&
         cp -r /home/app/nginx/logs/ /etc/nginx/logs &&
         cp -r /home/app/nginx/ssl/ /ssl/ && 
