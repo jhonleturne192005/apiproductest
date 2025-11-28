@@ -75,6 +75,8 @@ public class Cproduc
             pp.add(new Product("Leche Toni", "Leche entera pasteurizada", 7.0f));
             pp.add(new Product("Yogurt Alpina", "Yogurt natural con fruta", 6.5f));
             pp.add(new Product("eeeeeee", "eeeeeeeeeeee", 10.5f));
+            pp.add(new Product("jhon", "eeeeeeeeeeee", 10.5f));
+
 
             response.put("products", pp);
         }
