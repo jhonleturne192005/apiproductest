@@ -77,6 +77,8 @@ public class Cproduc
             pp.add(new Product("eeeeeee", "eeeeeeeeeeee", 10.5f));
             pp.add(new Product("jhon", "eeeeeeeeeeee", 10.5f));
 
+            pp.add(new Product("producto1", "ppp1", 20.5f));
+            pp.add(new Product("producto2", "ppp2", 30.5f));
 
             response.put("products", pp);
         }
