@@ -1,4 +1,4 @@
-FROM openjdk:19-jdk-alpine AS java_build
+FROM FROM eclipse-temurin:19-jdk AS java_build
 COPY target/productosapi-0.0.1-SNAPSHOT.jar javaapp.jar
 ENTRYPOINT ["java","-jar","javaapp.jar"]
 
